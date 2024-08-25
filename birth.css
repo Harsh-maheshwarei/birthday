@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: chocolate;
+    align-items: center;
+}
+
+.birthdayCard {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+}
+
+.birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+        0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthdayCard:hover .cardfront {
+    transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+    visibility: hidden;
+}
+
+.cardfront {
+    position: relative;
+background-image: url(eshhaha_9-20240825-0002.heic); 
+   width: 300px;
+    height: 400px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2) 30px 0 50px rgba(0, 0, 0, 0.4);
+    transition: 0.6s;
+}
+
+.happy {
+    font-family: tahoma, sans-serif;
+    text-align: center;
+    margin: 30px;
+    background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
+    transition: 0.1s;
+}
+
+.balloons {
+    position: absolute;
+}
+
+.balloon-1,
+.balloon-2,
+.balloon-3,
+.balloon-4 {
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+}
+
+.balloon-1 {
+    background-color: rgba(255, 93, 120, 0.7);
+    top: 50px;
+    left: -10px;
+}
+
+.balloon-2 {
+    background-color: rgba(249, 246, 33, 0.7);
+    top: 20px;
+    left: 65px;
+}
+
+.balloon-3 {
+    background-color: rgba(23, 240, 222, 0.7);
+    top: 45px;
+    left: 140px;
+}
+
+.balloon-4 {
+    background-color: rgba(110, 248, 46, 0.7);
+    top: 32px;
+    left: 220px;
+}
+
+.balloon-1::before,
+.balloon-2::before,
+.balloon-3::before,
+.balloon-4::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 155px;
+    background-color: #ffd856;
+    top: 95px;
+    left: 43px;
+}
+
+.balloon-1::after,
+.balloon-2::after,
+.balloon-3::after,
+.balloon-4::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top: 94px;
+    left: 37px;
+}
+
+.balloon-1::after {
+    border-bottom: 10px solid rgb(255, 93, 120);
+}
+
+.balloon-2::after {
+    border-bottom: 10px solid rgb(249, 246, 33);
+}
+
+.balloon-3::after {
+    border-bottom: 10px solid rgb(23, 240, 222);
+}
+
+.balloon-4::after {
+    border-bottom: 10px solid rgb(110, 248, 46);
+}
+
+.cardinside {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    z-index: -1;
+background-image: url(eshhaha_9-20240825-0001.jpg); 
+   object-fit: contain;
+   top: 0;
+
+    left: 0;
+    box-shadow: inset 100px 30px 100px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+/* .name {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    color: rgb(30, 28, 28);
+} */
+
+.back {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(209, 255, 2);
+    text-align: center;
+    margin: 30px;
+    outline-color: #f98c6e;
+}
